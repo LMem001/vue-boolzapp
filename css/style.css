@@ -63,7 +63,8 @@ h3 {
 .menu {
   width: 40%;
   height: 100%;
-  background-color: blue;
+  display: flex;
+  flex-direction: column;
 }
 
 .notifications {
@@ -121,6 +122,11 @@ h3 {
 
 .info__contact {
   border-left: 1px solid #B1B1B1;
+}
+
+.chat__list {
+  height: 100%;
+  background-color: #fff;
 }
 
 .chat {
