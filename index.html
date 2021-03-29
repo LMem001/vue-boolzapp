@@ -21,7 +21,7 @@
 </head>
 <body>
   <main>
-    <div class="container">
+    <div id="root" class="container">
       <!-- sidebar -->
       <aside class="menu">
         <!-- menu header -->
@@ -55,8 +55,9 @@
         </div>
         <!-- search bar -->
         <div class="chat__list">
-          <div class="chat__preview">
-
+          <div  v-for="(contact, i) in contacts" class="chat__preview">
+            <img class="avatar" :src="'img/avatar' + contacts[i].avatar + '.jpg'" alt="">
+            <h3>{{ contacts[i].name }}</h3>
           </div>
         </div>
       </aside>

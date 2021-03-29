@@ -57,6 +57,7 @@ main {
 /* Tipography */
 h3 {
   font-size: 15px;
+  font-weight: 400;
 }
 /* Tipography end */
 /* Mix end */
@@ -127,6 +128,20 @@ h3 {
 .chat__list {
   height: 100%;
   background-color: #fff;
+}
+
+.chat__preview {
+  display: flex;
+  padding: 10px 25px;
+}
+
+.chat__preview img {
+  height: 60px;
+  margin-right: 30px;
+}
+
+.chat__preview h3 {
+  font-size: 17px;
 }
 
 .chat {
