@@ -34,6 +34,10 @@ main {
   align-items: center;
 }
 
+.profile_base_info > * {
+  cursor: pointer;
+}
+
 .avatar {
   height: 54px;
   border-radius: 50%;
@@ -52,10 +56,38 @@ main {
 
 /* Tipography */
 h3 {
-  font-size: 13px;
+  font-size: 15px;
 }
 /* Tipography end */
 /* Mix end */
+.notifications {
+  padding: 13px 15px;
+  background-color: #8EDAFC;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.bell {
+  background-color: #fff;
+  color: #8EDAFC;
+  width: 53px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  margin-right: 8px;
+}
+
+.notifications h3:hover {
+  text-decoration: underline;
+}
+
+.notifications a {
+  font-size: 14px;
+  color: #6B7376;
+}
+
 .contacts {
   width: 40%;
   height: 100%;
