@@ -56,7 +56,7 @@
         <!-- /search bar -->
         <!-- chat list -->
         <div class="chat__list">
-          <div  v-for="(contact, i) in contacts" class="chat__preview">
+          <div  v-for="contact in contacts" class="chat__preview">
             <img class="avatar" :src="'img/avatar' + contact.avatar + '.jpg'" alt="">
             <h3>{{ contact.name }}</h3>
           </div>

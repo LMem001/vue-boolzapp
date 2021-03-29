@@ -77,7 +77,7 @@ h3 {
 }
 
 .bell {
-  background-color: #fff;#8EDAFC;
+  background-color: #fff;
   color: #8EDAFC;
   width: 53px;
   display: flex;
@@ -183,9 +183,5 @@ h3 {
 
 .sent {
   align-self: flex-end;
-}
-
-.received {
-  align-self:
 }
 /* chat end */
