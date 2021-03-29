@@ -183,9 +183,13 @@ h3 {
 .msg {
   min-width: 200px;
   max-width: 45%;
-  padding: 10px 20px;
   border-radius: 15px;
   font-size: 14px;
+}
+
+.msg p {
+  padding: 15px 20px;
+  padding-bottom: 5px;
 }
 
 .sent {
@@ -202,6 +206,7 @@ h3 {
   text-align: right;
   color: #B1B1B1;
   font-size: 12px;
+  margin-right: 20px;
 }
 
 .msg__input {
@@ -216,6 +221,7 @@ h3 {
 .msg__input i {
   font-size: 20px;
   color: #6B7376;
+  cursor:pointer;
 }
 
 .msg__input input {
