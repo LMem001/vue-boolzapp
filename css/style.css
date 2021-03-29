@@ -170,6 +170,22 @@ h3 {
 .chat__view {
   height: 100%;
   width: 100%;
-  background-image: url("../img/mine.jpg")
+  background-image: url("../img/mine.jpg");
+  display:flex;
+  flex-direction: column;
+}
+
+.msg {
+  background-color: grey;
+  width: 300px;
+  height: 100px;
+}
+
+.sent {
+  align-self: flex-end;
+}
+
+.received {
+  align-self:
 }
 /* chat end */
