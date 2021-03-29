@@ -53,6 +53,10 @@ main {
   cursor: pointer;
   margin-left: -4px;
 }
+
+.scrollbar--show {
+  overflow-y: scroll; /* Show scrollbars */
+}
 /* Tipography */
 h3 {
   font-size: 15px;

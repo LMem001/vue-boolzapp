@@ -55,7 +55,7 @@
         </div>
         <!-- /search bar -->
         <!-- chat list -->
-        <div class="chat__list">
+        <div class="chat__list scrollbar--show">
           <div  v-for="contact in contacts" class="chat__preview">
             <img class="avatar" :src="'img/avatar' + contact.avatar + '.jpg'" alt="">
             <h3>{{ contact.name }}</h3>
@@ -80,7 +80,7 @@
             <i class="fas fa-ellipsis-v"></i>
           </div>
         </div>
-        <div class="chat__view">
+        <div class="chat__view scrollbar--show">
           <div class="msg sent">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut lab
           <span class="msg__date">data e ora</span></div>
           <div class="msg received">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut lab
