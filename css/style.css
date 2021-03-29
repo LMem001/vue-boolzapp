@@ -68,6 +68,7 @@ h3 {
   flex-direction: column;
 }
 
+/* notifications */
 .notifications {
   padding: 13px 15px;
   background-color: #8EDAFC;
@@ -95,7 +96,8 @@ h3 {
   font-size: 14px;
   color: #6B7376;
 }
-
+/* notifications end */
+/* searchbar */
 .container__search {
   background-color: #EAEAEA;
   padding: 5px;
@@ -120,7 +122,8 @@ h3 {
   width: 100%;
   border: none;
 }
-
+/* searchbar end */
+/* chat list */
 .info__contact {
   border-left: 1px solid #B1B1B1;
 }
@@ -133,6 +136,11 @@ h3 {
 .chat__preview {
   display: flex;
   padding: 10px 25px;
+  cursor: pointer;
+}
+
+.chat__preview:hover {
+  background-color: rgba(177, 177, 177, 0.5);
 }
 
 .chat__preview img {
@@ -143,7 +151,7 @@ h3 {
 .chat__preview h3 {
   font-size: 17px;
 }
-
+/* chat list */
 .chat {
   width: 60%;
   height: 100%;
