@@ -4,8 +4,35 @@
   box-sizing: border-box;
 }
 
+.info {
+  width: 100%;
+  height: 80px;
+  background-color: yellow;
+}
+
 main {
   width: 100%;
   height: 100vh;
   background-image: linear-gradient(to top, #dbdbd2 80%, #009688 74%);
+  padding: 20px 0;
+}
+
+.container {
+  width: 80%;
+  height: 99%;
+  margin: auto;
+  display: flex;
+}
+
+.contacts {
+  width: 35%;
+  height: 100%;
+  background-color: blue;
+}
+
+
+.chat {
+  width: 65%;
+  height: 100%;
+  background-color: pink;
 }
