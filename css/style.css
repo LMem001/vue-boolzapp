@@ -6,21 +6,6 @@
   font-family: 'Lato', sans-serif;
 }
 
-.info {
-  width: 100%;
-  height: 80px;
-  background-color: #EAEAEA;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-}
-
-.profile_base_info {
-  display: flex;
-  align-items: center;
-}
-
 main {
   width: 100%;
   height: 100vh;
@@ -35,10 +20,35 @@ main {
   display: flex;
 }
 
+.info {
+  width: 100%;
+  background-color: #EAEAEA;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 11px;
+}
+
+.profile_base_info {
+  display: flex;
+  align-items: center;
+}
+
 .avatar {
-  height: 60px;
+  height: 54px;
   border-radius: 50%;
   }
+
+.interactions {
+  color: #B1B1B1;
+}
+
+.interactions i {
+  margin-right: 24px;
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: -4px;
+}
 
 /* Tipography */
 h3 {
@@ -47,7 +57,7 @@ h3 {
 /* Tipography end */
 /* Mix end */
 .contacts {
-  width: 35%;
+  width: 40%;
   height: 100%;
   background-color: blue;
 }
@@ -57,7 +67,7 @@ h3 {
 }
 
 .chat {
-  width: 65%;
+  width: 60%;
   height: 100%;
   background-color: pink;
 }
