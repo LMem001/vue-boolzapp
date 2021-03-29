@@ -173,15 +173,22 @@ h3 {
   background-image: url("../img/mine.jpg");
   display:flex;
   flex-direction: column;
+  padding: 30px 40px;
 }
 
 .msg {
-  background-color: grey;
-  width: 300px;
-  height: 100px;
+  min-width: 200px;
+  max-width: 45%;
+  padding: 10px 20px;
+  border-radius: 15px;
 }
 
 .sent {
   align-self: flex-end;
+  background-color: #D5F9BA;
+}
+
+.received {
+  background-color: #fff;
 }
 /* chat end */
