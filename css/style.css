@@ -60,6 +60,12 @@ h3 {
 }
 /* Tipography end */
 /* Mix end */
+.menu {
+  width: 40%;
+  height: 100%;
+  background-color: blue;
+}
+
 .notifications {
   padding: 13px 15px;
   background-color: #8EDAFC;
@@ -88,10 +94,29 @@ h3 {
   color: #6B7376;
 }
 
-.contacts {
-  width: 40%;
-  height: 100%;
-  background-color: blue;
+.container__search {
+  background-color: #EAEAEA;
+  padding: 5px;
+}
+
+.searchbar {
+  background-color: #fff;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  border-radius: 5px;
+}
+
+.searchbar .fa-search {
+  margin-right: 20px;
+  margin-left: 10px;
+  color: #B1B1B1;
+}
+
+.searchbar input {
+  outline: none;
+  width: 100%;
+  border: none;
 }
 
 .info__contact {
