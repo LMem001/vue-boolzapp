@@ -54,15 +54,17 @@
           </div>
         </div>
         <!-- /search bar -->
+        <!-- chat list -->
         <div class="chat__list">
           <div  v-for="(contact, i) in contacts" class="chat__preview">
             <img class="avatar" :src="'img/avatar' + contacts[i].avatar + '.jpg'" alt="">
             <h3>{{ contacts[i].name }}</h3>
           </div>
         </div>
+        <!-- /chat list -->
       </aside>
       <!-- /sidebar -->
-      <!-- chat list -->
+      <!-- chat -->
       <div class="chat">
         <div class="info info__contact">
           <div class="profile_base_info">
@@ -74,9 +76,11 @@
             <i class="icone_azione__icone fas fa-ellipsis-v"></i>
           </div>
         </div>
-
+        <div class="chat__view">
+          
+        </div>
       </div>
-      <!-- /chat list -->
+      <!-- /chat -->
     </div>
   </main>
   <script src="js/script.js" type="text/javascript"></script>
