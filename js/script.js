@@ -74,7 +74,7 @@ const app = new Vue(
             name: 'Luisa',
             avatar: '_4',
             lastSeen: '16:15',
-            visible: true,
+            visible: false,
             messages: [{
                 date: '10/01/2020 15:30:55',
                 message: 'Lo sai che ha aperto una nuova pizzeria?',

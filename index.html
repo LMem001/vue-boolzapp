@@ -78,7 +78,7 @@
             <img class="avatar" :src="'img/avatar' + contacts[currentChat].avatar + '.jpg'" alt="user avatar">
             <div class="contact__name">
               <h3> {{ contacts[currentChat].name }}</h3>
-              <span>Ultimo accesso oggi alle {{ contacts[currentChat].lastSeen }}</span>
+              <span v-if="contacts[currentChat].visible == true">Ultimo accesso oggi alle {{ contacts[currentChat].lastSeen }}</span>
             </div>
           </div>
           <nav class="interactions">
