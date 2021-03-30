@@ -2,6 +2,7 @@ const app = new Vue(
   {
   el:"#root",
   data: {
+    currentChat: 0,
     contacts: [
         {
             name: 'Michele',
@@ -83,6 +84,12 @@ const app = new Vue(
             ],
         },
     ]
+  },
+  methods: {
+    getIndex: function(index) {
+      this.currentChat = index;
+      console.log(this.currentChat);
+    }
   }
   }
 );

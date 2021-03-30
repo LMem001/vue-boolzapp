@@ -62,7 +62,7 @@
         <!-- chat list -->
         <div class="chat__list scrollbar--show">
           <ul>
-            <li  v-for="contact in contacts" class="chat__preview">
+            <li  v-for="(contact, i) in contacts" class="chat__preview" @click="getIndex(i)">
               <img class="avatar" :src="'img/avatar' + contact.avatar + '.jpg'" alt="">
               <h3>{{ contact.name }}</h3>
             </li>
@@ -91,7 +91,7 @@
         </div>
         <div class="chat__view scrollbar--show">
           <div class="msg sent">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut lab</p>
+            <p> lorem </p>
             <span class="msg__date">data e ora</span></div>
           <div class="msg received">
             <p>Tutto fatto!</p>
