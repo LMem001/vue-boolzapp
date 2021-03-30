@@ -98,14 +98,10 @@
             <p> {{ conversation.message }} </p>
             <span class="msg__date">{{ conversation.date }}</span>
           </div>
-          <!-- <div class="msg received">
-            <p>Tutto fatto!</p>
-            <span class="msg__date">data e ora</span>
-          </div> -->
         </div>
         <div class="msg__input">
           <i class="far fa-smile"></i>
-          <input type="text" v-model="newMessage" @keydown.13="pushMessage" name="chat input" placeholder="Scrivi un messaggio" value="">
+          <input type="text" v-model="newMessage" @keydown.13="pushMessage(newMessage, 'sent'), pushMessage('ok', 'received')" name="chat input" placeholder="Scrivi un messaggio" value="">
           <i class="fas fa-microphone"></i>
         </div>
       </div>

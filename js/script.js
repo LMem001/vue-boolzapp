@@ -103,18 +103,22 @@ const app = new Vue(
       this.currentChat = index;
       return 0;
     },
-    pushMessage: function() {
-      if(this.newMessage != "") {
-        console.log(this.contacts[this.currentChat].messages);
+    pushMessage: function(msg, sts) {
+      if(msg != "") {
+        console.log(msg);
         let newMsgObj = {
           date: "data",
-          message: this.newMessage,
-          status: 'sent'
+          message: msg,
+          status: sts
         };
         this.contacts[this.currentChat].messages.push(newMsgObj);
-        this.newMessage="";
+        this.newMessage = "";
         }
       },
+    autoResponse: function() {
+      let response = "ok";
+
+      }
     }
   }
 );
