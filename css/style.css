@@ -142,6 +142,7 @@ i {
 .chat__list {
   height: 100%;
   background-color: #fff;
+  overflow-x: hidden;
 }
 
 .chat__preview {
@@ -161,6 +162,18 @@ i {
 
 .chat__preview h3 {
   font-size: 17px;
+  margin-bottom: 5px;
+}
+
+.name_and_chat {
+  max-width: 70%;
+}
+
+.last_message {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 /* chat list */
 /* chat */
