@@ -88,7 +88,7 @@ const app = new Vue(
   methods: {
     getIndex: function(index) {
       this.currentChat = index;
-      console.log(this.currentChat);
+      return 0;
     }
   }
   }

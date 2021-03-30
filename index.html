@@ -90,13 +90,14 @@
           </nav>
         </div>
         <div class="chat__view scrollbar--show">
-          <div class="msg sent">
-            <p> lorem </p>
-            <span class="msg__date">data e ora</span></div>
-          <div class="msg received">
-            <p>Tutto fatto!</p>
+          <div v-for="conversation in contacts[currentChat].messages" class="msg" :class="conversation.status">
+            <p> {{ conversation.message }} </p>
             <span class="msg__date">data e ora</span>
           </div>
+          <!-- <div class="msg received">
+            <p>Tutto fatto!</p>
+            <span class="msg__date">data e ora</span>
+          </div> -->
         </div>
         <div class="msg__input">
           <i class="far fa-smile"></i>
