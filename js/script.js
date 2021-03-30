@@ -12,7 +12,7 @@ const app = new Vue(
             name: 'Michele',
             avatar: '_1',
             online: false,
-            lastSeen: '16:52',
+            lastSeen: '15:30',
             visible: true,
             messages: [{
                 date: '10/01/2020 15:30:55',

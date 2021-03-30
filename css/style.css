@@ -152,7 +152,11 @@ i {
 }
 
 .chat__preview:hover {
-  background-color: rgba(177, 177, 177, 0.5);
+  background-color: rgba(177, 177, 177, 0.3);
+}
+
+.chat--active {
+  background-color: rgba(177, 177, 177, 0.6);
 }
 
 .chat__preview img {
@@ -174,6 +178,7 @@ i {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-size: 13px;
 }
 /* chat list */
 /* chat */

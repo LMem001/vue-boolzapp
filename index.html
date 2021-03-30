@@ -62,7 +62,7 @@
         <!-- chat list -->
         <div class="chat__list scrollbar--show">
           <ul>
-            <li  v-for="(contact, i) in contacts" class="chat__preview" @click="getIndex(i)">
+            <li  v-for="(contact, i) in contacts" class="chat__preview" :class="currentChat == i ? 'chat--active' : ''" @click="getIndex(i)">
               <img class="avatar" :src="'img/avatar' + contact.avatar + '.jpg'" alt="">
               <div class="name_and_chat">
                 <h3>{{ contact.name }}</h3>
