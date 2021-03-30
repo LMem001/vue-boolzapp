@@ -7,6 +7,7 @@ const app = new Vue(
         {
             name: 'Michele',
             avatar: '_1',
+            online: false,
             lastSeen: '16:52',
             visible: true,
             messages: [{
@@ -29,8 +30,9 @@ const app = new Vue(
         {
             name: 'Fabio',
             avatar: '_2',
+            online: false,
             lastSeen: '16:52',
-            visible: true,
+            visible: false,
             messages: [{
                 date: '20/03/2020 16:30:00',
                 message: 'Ciao come stai?',
@@ -51,6 +53,7 @@ const app = new Vue(
         {
             name: 'Samuele',
             avatar: '_3',
+            online: false,
             lastSeen: '16:52',
             visible: true,
             messages: [{
@@ -73,8 +76,9 @@ const app = new Vue(
         {
             name: 'Luisa',
             avatar: '_4',
+            online: true,
             lastSeen: '16:15',
-            visible: false,
+            visible: true,
             messages: [{
                 date: '10/01/2020 15:30:55',
                 message: 'Lo sai che ha aperto una nuova pizzeria?',
