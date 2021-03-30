@@ -3,6 +3,7 @@ const app = new Vue(
   el:"#root",
   data: {
     currentChat: 0,
+    newMessage: "",
     myAccount: {
       name: "Odina",
       avatar: '_io',
@@ -101,7 +102,19 @@ const app = new Vue(
     getIndex: function(index) {
       this.currentChat = index;
       return 0;
+    },
+    pushMessage: function() {
+      if(this.newMessage != "") {
+        console.log(this.contacts[this.currentChat].messages);
+        let newMsgObj = {
+          date: "data",
+          message: this.newMessage,
+          status: 'sent'
+        };
+        this.contacts[this.currentChat].messages.push(newMsgObj);
+        this.newMessage="";
+        }
+      },
     }
-  }
   }
 );

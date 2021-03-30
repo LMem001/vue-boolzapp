@@ -155,7 +155,7 @@ i {
   background-color: rgba(177, 177, 177, 0.3);
 }
 
-.chat--active {
+.chat--active, .chat--active:hover {
   background-color: rgba(177, 177, 177, 0.6);
 }
 
