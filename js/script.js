@@ -3,6 +3,10 @@ const app = new Vue(
   el:"#root",
   data: {
     currentChat: 0,
+    myAccount: {
+      name: "Odina",
+      avatar: '_io',
+    },
     contacts: [
         {
             name: 'Michele',
