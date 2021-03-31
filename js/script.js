@@ -105,7 +105,6 @@ const app = new Vue(
     },
     pushMessage: function(msg, sts) {
       if(msg != "") {
-        console.log(msg);
         let newMsgObj = {
           date: "data",
           message: msg,
@@ -116,8 +115,7 @@ const app = new Vue(
         }
       },
     autoResponse: function() {
-      let response = "ok";
-
+      response = setTimeout(this.pushMessage, 1000, "ok", "received");
       }
     }
   }
