@@ -105,8 +105,9 @@ const app = new Vue(
     },
     pushMessage: function(msg, sts) {
       if(msg != "") {
+        let today = dayjs();
         let newMsgObj = {
-          date: "data",
+          date: today.format("DD/MM/YYYY hh:mm:ss"),
           message: msg,
           status: sts
         };
