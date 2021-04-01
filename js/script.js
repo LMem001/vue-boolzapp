@@ -103,20 +103,36 @@ const app = new Vue(
       this.currentChat = index;
       return 0;
     },
-    pushMessage: function(msg, sts) {
+    pushMessage: function(chatIndex, msg, sts) {
+      // add a new message to the messages object
+      // param chatIndex: int
+      // param message, sts: string
       if(msg != "") {
         let today = dayjs();
         let newMsgObj = {
-          date: today.format("DD/MM/YYYY hh:mm:ss"),
+          date: today.format("DD/MM/YYYY HH:mm:ss"),
           message: msg,
           status: sts
         };
-        this.contacts[this.currentChat].messages.push(newMsgObj);
+        this.contacts[chatIndex].messages.push(newMsgObj);
         this.newMessage = "";
         }
+      return 0;
       },
-    autoResponse: function() {
-      response = setTimeout(this.pushMessage, 1000, "ok", "received");
+    goOffline: function(chatIndex) {
+      // give to the bot the offline status
+      this.contacts[chatIndex].online = false;
+      let today = dayjs();
+      this.contacts[chatIndex].lastSeen = today.format("HH:mm");
+      return 0;
+    },
+    autoResponse: function(chatIndex) {
+      // give the capacity to the bots to responde with 'ok'
+      // param chatIndex: int
+      this.contacts[chatIndex].online = true;
+      setTimeout(this.pushMessage, 1000, chatIndex, "ok", "received");
+      setTimeout(this.goOffline, 3000, chatIndex);
+      return 0;
       }
     }
   }
