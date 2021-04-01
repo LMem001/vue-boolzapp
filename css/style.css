@@ -207,11 +207,12 @@ i {
 }
 
 .msg {
-  min-width: 200px;
+  min-width: 35%;
   max-width: 45%;
   border-radius: 15px;
   font-size: 14px;
   margin-bottom: 10px;
+  overflow-wrap: break-word;
 }
 
 .msg p {
