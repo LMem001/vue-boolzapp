@@ -58,7 +58,7 @@ const app = new Vue(
         {
             name: 'Samuele',
             avatar: '_3',
-            online: false,
+            online: true,
             lastSeen: '16:52',
             visible: true,
             messages: [{
@@ -81,7 +81,7 @@ const app = new Vue(
         {
             name: 'Luisa',
             avatar: '_4',
-            online: true,
+            online: false,
             lastSeen: '16:15',
             visible: true,
             messages: [{
@@ -115,7 +115,6 @@ const app = new Vue(
           status: sts
         };
         this.contacts[chatIndex].messages.push(newMsgObj);
-        this.newMessage = "";
         }
       return 0;
       },
@@ -126,12 +125,22 @@ const app = new Vue(
       this.contacts[chatIndex].lastSeen = today.format("HH:mm");
       return 0;
     },
-    autoResponse: function(chatIndex) {
+    autoResponse: function(chatIndex, msg) {
       // give the capacity to the bots to responde with 'ok'
       // param chatIndex: int
-      this.contacts[chatIndex].online = true;
-      setTimeout(this.pushMessage, 1000, chatIndex, "ok", "received");
-      setTimeout(this.goOffline, 3000, chatIndex);
+      console.log(msg);
+      if(msg != "") {
+        if(this.contacts[chatIndex].online == false) {
+          this.contacts[chatIndex].online = true;
+          setTimeout(this.pushMessage, 1000, chatIndex, "ok", "received");
+          setTimeout(this.goOffline, 3000, chatIndex);
+          }
+        else {
+          // if the bot is online, it will go offline without answering the user
+          setTimeout(this.goOffline, 3000, chatIndex);
+          }
+        this.newMessage = "";
+        }
       return 0;
       }
     }

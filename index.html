@@ -105,7 +105,7 @@
         </div>
         <div class="msg__input">
           <i class="far fa-smile"></i>
-          <input type="text" v-model="newMessage" @keydown.13="pushMessage(currentChat, newMessage, 'sent'), autoResponse(currentChat)" name="chat input" placeholder="Scrivi un messaggio" value="">
+          <input type="text" v-model="newMessage" @keydown.13="pushMessage(currentChat, newMessage, 'sent'), autoResponse(currentChat, newMessage)" name="chat input" placeholder="Scrivi un messaggio" value="">
           <i class="fas fa-microphone"></i>
         </div>
       </div>
