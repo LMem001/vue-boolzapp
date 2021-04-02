@@ -32,11 +32,14 @@
       <!-- sidebar -->
       <aside class="menu">
         <!-- menu header -->
+        <!-- user info -->
         <div class="info">
           <div class="profile_base_info">
             <img class="avatar" :src="'img/avatar' + myAccount.avatar + '.jpg'" alt="user avatar">
             <h3> {{ myAccount.name }} </h3>
           </div>
+          <!-- /user info -->
+          <!-- interactions -->
           <nav class="interactions">
             <ul>
               <li><i class="icone_azione__icone fas fa-circle-notch"></i></li>
@@ -44,6 +47,7 @@
               <li><i class="icone_azione__icone fas fa-ellipsis-v"></i></li>
             </ul>
           </nav>
+          <!-- interactions -->
         </div>
         <!-- menu header -->
         <!-- notifications -->
@@ -80,7 +84,9 @@
       <!-- /sidebar -->
       <!-- chat -->
       <div class="chat">
+        <!-- chat info & interactions -->
         <div class="info info__contact">
+          <!-- current chat contact's info -->
           <div class="profile_base_info">
             <img class="avatar" :src="'img/avatar' + contacts[currentChat].avatar + '.jpg'" alt="user avatar">
             <div class="contact__name">
@@ -89,6 +95,8 @@
               <span v-if="contacts[currentChat].online == true">online </span>
             </div>
           </div>
+          <!-- /current chat contact's info -->
+          <!-- interactions -->
           <nav class="interactions">
             <ul>
               <li><i class="fas fa-search"></i></li>
@@ -96,7 +104,10 @@
               <li><i class="fas fa-ellipsis-v"></i></li>
             </ul>
           </nav>
+          <!-- /interactions -->
         </div>
+        <!-- chat info & interactions -->
+        <!-- chat view -->
         <div class="chat__view scrollbar--show">
           <div v-for="conversation in contacts[currentChat].messages" class="msg" :class="conversation.status">
             <p> {{ conversation.message }} </p>
@@ -109,6 +120,7 @@
           <i class="fas fa-microphone"></i>
         </div>
       </div>
+      <!-- /chat view -->
       <!-- /chat -->
     </div>
   </main>

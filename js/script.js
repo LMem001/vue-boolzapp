@@ -8,6 +8,17 @@ const app = new Vue(
       name: "Odina",
       avatar: '_io',
     },
+    /* object contact
+    * param name {string}: name of the contact
+    * param avatar {string}: avatar index
+    * param online {boolean}: show if contact is online on the app
+    * param lastSeen {string}: last time the contact was online
+    * param visible {boolean}: contact choiche to show or hide its last acces
+    ** object: message
+    ** param date {string}: shows when the message was written
+    ** param message {string}: shows the message content
+    ** param status {string}: says if the message was sent by the user or its contact
+    */
     contacts: [
         {
             name: 'Michele',
@@ -100,6 +111,7 @@ const app = new Vue(
   },
   methods: {
     getIndex: function(index) {
+      // param index: int
       this.currentChat = index;
       return 0;
     },
@@ -108,6 +120,7 @@ const app = new Vue(
       // param chatIndex: int
       // param message, sts: string
       if(msg != "") {
+        // push the message only if is not empty
         let today = dayjs();
         let newMsgObj = {
           date: today.format("DD/MM/YYYY HH:mm:ss"),
@@ -133,7 +146,7 @@ const app = new Vue(
         if(this.contacts[chatIndex].online == false) {
           this.contacts[chatIndex].online = true;
           setTimeout(this.pushMessage, 1000, chatIndex, "ok", "received");
-          setTimeout(this.goOffline, 3000, chatIndex);
+          setTimeout(this.goOffline, 2000, chatIndex);
           }
         else {
           // if the bot is online, it will go offline without answering the user

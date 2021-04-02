@@ -189,6 +189,7 @@ i {
   flex-direction: column;
 }
 
+/* chat info & interactions */
 .profile_base_info img {
   margin-right: 20px;
 }
@@ -196,7 +197,8 @@ i {
 .contact__name span {
   color: #6B7376;
 }
-
+/* chat info & interactions end */
+/* chat view */
 .chat__view {
   height: 100%;
   width: 100%;
@@ -260,4 +262,5 @@ i {
   outline: none;
   padding: 15px 20px;
 }
+/* chat view end */
 /* chat end */
