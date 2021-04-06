@@ -63,15 +63,15 @@
         <div class="container__search">
           <div class="searchbar">
             <i class="fas fa-search"></i>
-            <input type="text" name="search contact" placeholder="Cerca o Inizia una nuova chat" value="">
+            <input type="text" name="search contact" placeholder="Cerca o Inizia una nuova chat" v-model="nameFilter" value="">
           </div>
         </div>
         <!-- /search bar -->
         <!-- chat list -->
         <div class="chat__list scrollbar--show">
           <ul>
-            <li  v-for="(contact, i) in contacts" class="chat__preview" :class="{ 'chat--active': i == currentChat }" @click="getIndex(i)">
-              <img class="avatar" :src="'img/avatar' + contact.avatar + '.jpg'" alt="">
+            <li  v-for="(contact, i) in contacts" class="chat__preview" :class="{ 'chat--active': i == currentChat }" @click="getIndex(i)" v-if="contact.name.includes(nameFilter)">
+              <img class="avatar" :src="'img/avatar' + contact.avatar + '.jpg'" alt="contact avatar">
               <div class="name_and_chat">
                 <h3>{{ contact.name }}</h3>
                 <span class="last_message">{{ contact.messages[contact.messages.length - 1].message }}</span>

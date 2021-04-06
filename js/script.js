@@ -4,6 +4,7 @@ const app = new Vue(
   data: {
     currentChat: 0,
     newMessage: "",
+    nameFilter: "",
     myAccount: {
       name: "Odina",
       avatar: '_io',
