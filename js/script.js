@@ -111,6 +111,13 @@ const app = new Vue(
     ]
   },
   methods: {
+    chatSearch: function(contact) {
+      // param contact: string
+      // return bool
+      lowerContact = contact.name.toLowerCase();
+      lowerNameFilter = this.nameFilter.toLowerCase()
+      return lowerContact.includes(lowerNameFilter);
+    },
     getIndex: function(index) {
       // param index: int
       this.currentChat = index;
