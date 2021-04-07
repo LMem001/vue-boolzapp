@@ -70,7 +70,7 @@
         <!-- chat list -->
         <div class="chat__list scrollbar--show">
           <ul>
-            <li  v-for="(contact, i) in contacts" class="chat__preview" :class="{ 'chat--active': i == currentChat }" @click="getIndex(i)" v-if="chatSearch(contact) == true">
+            <li  v-for="(contact, i) in contacts" class="chat__preview" :class="{ 'chat--active': i == currentChat }" @click="getIndex(i)" v-show="chatSearch(contact) == true">
               <img class="avatar" :src="'img/avatar' + contact.avatar + '.jpg'" alt="contact avatar">
               <div class="name_and_chat">
                 <h3>{{ contact.name }}</h3>
@@ -91,8 +91,8 @@
             <img class="avatar" :src="'img/avatar' + contacts[currentChat].avatar + '.jpg'" alt="user avatar">
             <div class="contact__name">
               <h3> {{ contacts[currentChat].name }}</h3>
-              <span v-if="contacts[currentChat].visible == true && contacts[currentChat].online == false">Ultimo accesso oggi alle {{ contacts[currentChat].lastSeen }}</span>
-              <span v-if="contacts[currentChat].online == true">online </span>
+              <span v-show="contacts[currentChat].visible == true && contacts[currentChat].online == false">Ultimo accesso oggi alle {{ contacts[currentChat].lastSeen }}</span>
+              <span v-show="contacts[currentChat].online == true">online </span>
             </div>
           </div>
           <!-- /current chat contact's info -->
